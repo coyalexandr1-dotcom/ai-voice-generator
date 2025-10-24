@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceCraft Pro - Professional TTS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎙️ VoiceCraft Pro</h1>
+            <p>Профессиональный генератор речи с искусственным интеллектом</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <label for="textInput">Текст для преобразования:</label>
+                <textarea 
+                    id="textInput" 
+                    placeholder="Введите текст на русском или английском языке..."
+                    rows="6"
+                ></textarea>
+            </div>
+
+            <div class="controls">
+                <div class="voice-selection">
+                    <label for="voiceSelect">Голос:</label>
+                    <select id="voiceSelect">
+                        <option value="21m00Tcm4TlvDq8ikWAM">Rachel (Английский)</option>
+                        <option value="AZnzlk1XvdvUeBnXmlld">Domi (Английский)</option>
+                        <option value="IKne3meq5aSn9XLyUdCD">Charlie (Английский)</option>
+                    </select>
+                </div>
+
+                <div class="buttons">
+                    <button id="generateBtn" class="btn btn-primary">
+                        <span class="btn-text">Сгенерировать речь</span>
+                        <div class="spinner hidden"></div>
+                    </button>
+                    <button id="playBtn" class="btn btn-secondary" disabled>
+                        🔊 Воспроизвести
+                    </button>
+                    <button id="downloadBtn" class="btn btn-secondary" disabled>
+                        💾 Скачать
+                    </button>
+                </div>
+            </div>
+
+            <div class="audio-section">
+                <audio id="audioPlayer" controls class="hidden"></audio>
+            </div>
+
+            <div id="status" class="status hidden"></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
